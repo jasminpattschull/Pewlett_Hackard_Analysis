@@ -13,7 +13,7 @@ The following are four noted points from the analysis described above.
 
 * The group facing the biggest loss as a large number of employees reach retirement age are those with the job title of Senior Engineer.  Senior Staff comes in as a very close second.  These senior positions are to be expected as those who are reaching retirement age likely have a great amount of knowledge and hold senior positions within the company.
 
-*insert retiring_titles image*
+![retiring_titles](https://user-images.githubusercontent.com/90632470/140168219-bd345cff-0311-4cc6-a65f-6c7737b60951.png)
 
 * From the image above, it is also noted that the position of Engineer will also face substantial losses over a potentially short period. Those holding position of Assistant Engineer have potential to move into an Engineer position in an effort to foster promotion from within.
 
