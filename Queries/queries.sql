@@ -182,15 +182,28 @@ ON (ce.emp_no = de.emp_no)
 INNER JOIN departments as d
 ON (de.dept_no = d.dept_no);
 
--- Joining retirement_info and dept_employees tables tailored for Sales dept
-SELECT ri.emp_no,
-     ri.first_name,
-     ri.last_name,
-     de.dept_no
---INTO sales_emp_info
-FROM retirement_info as ri
-LEFT JOIN dept_employees as de
-ON ri.emp_no = de.emp_no
-WHERE de.dept_no = ('d007');
---Verify table
-SELECT * FROM current_emp;
+--Create Sales dept info csv	
+SELECT ce.emp_no,
+	ce.first_name,
+	ce.last_name,
+	d.dept_name
+INTO sales_dept_info
+FROM current_emp as ce
+INNER JOIN dept_employees as de
+ON (ce.emp_no = de.emp_no)
+INNER JOIN departments as d
+ON (de.dept_no = d.dept_no)
+WHERE dept_name IN ('Sales');
+
+--Create combined Sales and Development dept info csv	
+SELECT ce.emp_no,
+	ce.first_name,
+	ce.last_name,
+	d.dept_name
+INTO sales_dev_dept_info
+FROM current_emp as ce
+INNER JOIN dept_employees as de
+ON (ce.emp_no = de.emp_no)
+INNER JOIN departments as d
+ON (de.dept_no = d.dept_no)
+WHERE dept_name IN ('Sales', 'Development');
